@@ -13,7 +13,7 @@ $(function () {
         var work = $('input[name="work"]').val();
 
         var msg = `氏名：${name}
-            \n生年月日：${date}年${month}月${day}日
+            \n生年月日：${year}年${month}月${day}日
             \nお住まいの地域：${area}
             \n職業：${work}`;
         sendText(msg);

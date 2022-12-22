@@ -10,8 +10,9 @@ $(function () {
     $('form').submit(function () {
         var name = $('input[name="name"]').val();
         var date = $('input[name="date"]:checked').val();
+        var area = $('input[name="area"]').val();
 
-        var msg = `氏名：${name}\n生年月日：${date}`;
+        var msg = `氏名：${name}\n生年月日：${date}\nお住まいの地域：${area}`;
         sendText(msg);
 
         return false;

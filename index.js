@@ -16,10 +16,19 @@ $(function () {
         age = 2023 - year_num;
 
         var msg = `氏名：${name}
-            \n生年月日：${year}年${month}月${day}日
-            \n年齢：${age}
-            \nお住まいの地域：${area}
-            \n職業：${work}`;
+        \n生年月日：${year}年${month}月${day}日
+        \n年齢：${age}
+        \nお住まいの地域：${area}
+        \n職業：${work}`;
+
+        const url = "https://hooks.slack.com/services/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";
+        const data = {msg};
+      
+        const xml = new XMLHttpRequest();
+        xml.open("POST", url, false);
+        xml.setRequestHeader("content-type", "application/x-www-form-urlencoded;charset=UTF-8");
+        xml.send(`payload=${JSON.stringify(data)}`)
+
         sendText(msg);
         return false;
     });

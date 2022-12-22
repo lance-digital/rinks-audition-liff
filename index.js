@@ -15,11 +15,7 @@ $(function () {
         year_num = Number(year);
         age = 2023 - year_num;
 
-        var msg = `氏名：${name}
-        \n生年月日：${year}年${month}月${day}日
-        \n年齢：${age}
-        \nお住まいの地域：${area}
-        \n職業：${work}`;
+        var msg = `氏名：${name}\n生年月日：${year}年${month}月${day}日\n年齢：${age}\nお住まいの地域：${area}\n職業：${work}`;
 
         sendText(msg);
         return false;

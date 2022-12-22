@@ -4,13 +4,13 @@ $(function () {
         //氏名
         var name = $('input[name="name"]').val();
         //生年月日
-        var year = $('#year').val();
-        var month = $('#month').val();
-        var day = $('#day').val();
+        var year = $('input[id="year"]').val();
+        var month = $('input[id="month"]').val();
+        var day = $('input[id="day"]').val();
         //住んでいる地域
-        var area = $('#area').val();
+        var area = $('input[id="area"]').val();
         //職業
-        var work = $('#work').val();
+        var work = $('input[id="work"]').val();
 
         var msg = `氏名：${name}
             \n生年月日：${year}年${month}月${day}日

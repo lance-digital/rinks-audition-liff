@@ -21,6 +21,10 @@ $(function () {
         \nお住まいの地域：${area}
         \n職業：${work}`;
 
+        sendText(msg);
+        return false;
+    });
+
     $('#upfile').change(function(e){
         var file = e.target.files[0];
         var reader = new FileReader();

@@ -25,8 +25,8 @@ $(function () {
         
         //年齢処理
         var age = today.getFullYear() - birthday.year;
-        if(today < thisYearsBirthday)
-            age--;{
+        if(today < thisYearsBirthday){
+            age--;
         }
         
         var msg = `氏名：${name}\n生年月日：${year}年${month}月${day}日\n年齢：${age}歳\nお住まいの地域：${area}\n職業：${work}`;

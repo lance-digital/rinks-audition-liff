@@ -12,8 +12,11 @@ $(function () {
         //職業
         var work = $('#work').val();
 
-        year_num = Number(year);
-        age = 2023 - year_num;
+        //年齢計算
+        //誕生日変換
+        var birthday = new Date(Number(year), Number(month), Number(day));
+        var today = new Date();
+        age = today.getDate() - birthday.getDate(); 
 
         var msg = `氏名：${name}\n生年月日：${year}年${month}月${day}日\n年齢：${age}\nお住まいの地域：${area}\n職業：${work}`;
 

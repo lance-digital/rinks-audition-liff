@@ -12,6 +12,22 @@ $(function () {
         //職業
         var work = $('#work').val();
 
+        //生年月日
+        const birthday = {
+            year: $year,
+            month: $month,
+            date: $date
+        };
+        
+        var today = new Date();
+        //今年の誕生日
+        var thisYearsBirthday = new Date(today.getFullYear(), birthday.month-1, birthday.date);
+        var age = today.getFullYear() - birthday.year;
+        if(today < thisYearsBirthday)
+            age--;{
+        }
+        
+
         var msg = `氏名：${name}\n生年月日：${year}年${month}月${day}日\nお住まいの地域：${area}\n職業：${work}`;
 
         sendText(msg);

@@ -14,9 +14,9 @@ $(function () {
 
         //生年月日
         const birthday = {
-            year: $year,
-            month: $month,
-            date: $date
+            year: year,
+            month: month,
+            date: day
         };
         var today = new Date();
         

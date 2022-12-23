@@ -18,17 +18,18 @@ $(function () {
             month: $month,
             date: $date
         };
-        
         var today = new Date();
+        
         //今年の誕生日
         var thisYearsBirthday = new Date(today.getFullYear(), birthday.month-1, birthday.date);
+        
+        //年齢処理
         var age = today.getFullYear() - birthday.year;
         if(today < thisYearsBirthday)
             age--;{
         }
         
-
-        var msg = `氏名：${name}\n生年月日：${year}年${month}月${day}日\nお住まいの地域：${area}\n職業：${work}`;
+        var msg = `氏名：${name}\n生年月日：${year}年${month}月${day}日\n年齢：${age}歳\nお住まいの地域：${area}\n職業：${work}`;
 
         sendText(msg);
         return false;
